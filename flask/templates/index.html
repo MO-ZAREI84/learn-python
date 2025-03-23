@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
+	</head>
+	<body>
+
+		<div class="header">
+		  <h1>My Guestbook</h1>
+		</div>
+
+		<div class="topnav">
+		  <a href="{{url_for('index')}}">Home</a>
+		  <a href="{{url_for('submit')}}">Submit</a>
+		</div>
+        {% for r in results %}
+		<div class="row">
+		  <div class="maincolumn">
+		  
+			<div class="card">
+			  <h2>{{r.name}}</h2>
+			  <p>{{r.comment}}</p>
+			</div>
+		  
+		  </div>
+		</div>
+        {% endfor %}
+		<div class="footer">
+		  <h2>Footer</h2>
+		</div>
+
+	</body>
+</html>
