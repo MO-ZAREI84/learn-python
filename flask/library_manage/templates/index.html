@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{%block content%}
+<table class="table">
+    <thead>
+
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {%for m in members %}
+      <tr>
+        <th scope="row">{{m.id}}</th>
+        <td>{{m.firstname}}</td>
+        <td>{{m.lasttname}}</td>
+        <td>@{{m.email}}</td>
+        <td>{{m.phone}}</td>
+        <td>
+          <a href="/delete/{{m.id}}" class="btn btn-danger">حذف</a>
+          <a href="/edit/{{m.id}}" class="btn btn-warning">ویرایش</a>
+
+        </td>
+        
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+    
+
+  </table>
+  <a href="{{url_for('new')}}" class="btn btn-success">اضافه کردن</a>
+
+{% endblock %}
