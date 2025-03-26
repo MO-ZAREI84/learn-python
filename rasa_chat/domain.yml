@@ -1,0 +1,30 @@
+intents:
+  - greet
+  - thanks
+  - bye
+  - search_flights
+  - search_trains
+  - find_itineraries
+
+entities:
+  - source
+  - destination
+
+responses:
+  utter_greet:
+    - text: "Hey!"
+  utter_welcome:
+    - text: "You are welcome!"
+  utter_goodbye:
+    - text: "Bye."
+  utter_unclear:
+    - text: "Sorry, I am unable to understand"
+
+actions:
+  - utter_greet
+  - utter_welcome
+  - utter_goodbye
+  - utter_unclear
+  - action_find_flights
+  - action_find_trains
+  - action_find_itineraries
