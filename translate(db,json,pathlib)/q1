@@ -27,9 +27,3 @@ def translate(w):
             print("you dont have this word")
 word = get_user()
 translate(word)
-# CREATE TABLE "translate" (
-# 	"id"	INTEGER,
-# 	"word"	TEXT,
-# 	"meaning"	TEXT,
-# 	PRIMARY KEY("id")
-# );
