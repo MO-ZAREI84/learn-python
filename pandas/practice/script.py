@@ -14,7 +14,7 @@ with open("world.json", "r", encoding="utf-8") as f:
 geojson_layer = folium.GeoJson(
     world_geojson,
     name="مرز کشورها",  # نام لایه برای کنترل
-    style_function=lambda x: {"fillColor": "gray", "color": "black", "weight": 1, "fillOpacity": 0.2}
+    style_function=lambda x: {"fillColor": "gray", "color": "black", "weight": 20, "fillOpacity": 0.2}
 ).add_to(m)
 
 #  **لایه‌ی مارکرهای آبشارها**
@@ -30,7 +30,7 @@ for index, row in df.iterrows():
     if height > 50:
         color = "red"  
     elif height > 20:
-        color = "orange"  
+        color = "blue"  
     else:
         color = "green"  
     folium.Marker(
