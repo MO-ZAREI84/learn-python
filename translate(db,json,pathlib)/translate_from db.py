@@ -1,9 +1,9 @@
 from pathlib import Path
-import json
+
 import sqlite3
 
 data = Path("data.json").read_text()
-words_list = json.loads(data)
+
 
 def get_user_input():
     word = input("please enter a word: ")
